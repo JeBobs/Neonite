@@ -1130,6 +1130,10 @@ module.exports = {
 	},
 
 	magpieInventory: function (req, res) {
+		const {versionGlobal} = getVersionInfo(req);
+		let metadata
+		if(versionGlobal === 41){metadata = "{\"StarterRelic\":\"EarthSprite_Variant_A\",\"EquippedVariant\":\"None\"}"}
+		if(versionGlobal === 42){metadata = "{\"StarterRelic\":\"Jonesy_Variant_A\",\"EquippedVariant\":\"None\"}"}
 		if (config.relicStarterScreen && !misc.relicStarterScreenDone) {
 			res.json({
 				"accountId": req.params.accountId,
@@ -1146,7 +1150,6 @@ module.exports = {
 
 			for (const key in spriteCollection) {
 				if (key !== "Currency_ExtractionPoints") {
-					// set level and mastered status
 					entitlementMetadata[key] = JSON.stringify({
 						xp: parseInt(config.relicXP),
 						ml: config.relicMastered
@@ -1167,9 +1170,9 @@ module.exports = {
 					{
 						"counts": spriteCollection,
 						"entitlementMetadata": entitlementMetadata,
-						"metadata": "{\"StarterRelic\":\"EarthSprite_Variant_A\",\"EquippedVariant\":\"None\"}",
+						"metadata": metadata,
 						"metadataSchemaVersion": 0,
-						"moduleId": "70329e8f-f377-4a73-90cf-76b7ace87a07",
+						"moduleId": req.query["moduleFilters"].split(':')[0],
 						"purchasedEntitlementConsequentialToGameplay": false
 					}
 				],
@@ -1199,7 +1202,7 @@ module.exports = {
 					linkMode: null,
 					workspace: null,
 					inventory: [{
-						moduleId: "70329e8f-f377-4a73-90cf-76b7ace87a07",
+						moduleId: req.params.moduleId,
 						purchasedEntitlementConsequentialToGameplay: false,
 						counts: {
 							[sprite]: 2
@@ -1215,7 +1218,7 @@ module.exports = {
 					linkMode: null,
 					workspace: null,
 					inventory: [{
-						moduleId: "70329e8f-f377-4a73-90cf-76b7ace87a07",
+						moduleId: req.params.moduleId,
 						purchasedEntitlementConsequentialToGameplay: false,
 						counts: {
 							[sprite]: 2
@@ -1242,7 +1245,7 @@ module.exports = {
 					linkMode: null,
 					workspace: null,
 					inventory: [{
-						moduleId: "70329e8f-f377-4a73-90cf-76b7ace87a07",
+						moduleId: req.params.moduleId,
 						purchasedEntitlementConsequentialToGameplay: false,
 						counts: {
 							[sprite]: 2,

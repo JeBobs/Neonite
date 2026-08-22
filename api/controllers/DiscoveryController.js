@@ -652,6 +652,20 @@ module.exports = {
 					]
 				});
 			}
+			if (versionGlobal >= 42) {
+				updateMetadata(global.discoveryv2, "set_br_playlists", {
+					"product_tag": "Product.BR"
+				});
+				updateMetadata(global.discoveryv2, "playlist_defaultsolo", {
+					"product_tag": "Product.BR"
+				});
+				updateMetadata(global.discoveryv2, "playlist_defaultduo", {
+					"product_tag": "Product.BR"
+				});
+				updateMetadata(global.discoveryv2, "playlist_trios", {
+					"product_tag": "Product.BR"
+				});
+			}
 			return res.json(discoveryv2);
 		}
 		else {
