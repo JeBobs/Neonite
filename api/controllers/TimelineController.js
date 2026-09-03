@@ -854,6 +854,13 @@ module.exports = {
                 "EventFlag.Event_MorningBellQuests_S40_Pt1",
                 "EventFlag.Event_MorningBellQuests_S40_Pt2",
                 "EventFlag.Event_FlameCeleb_S40"
+            ],
+
+            "42.10|42.20": [ //assuming first stage is active for 2 versions
+                "DustyUpdate_A"
+               //"DustyUpdate_B"
+               //"DustyUpdate_C"
+               //"DustyUpdate_D" //might make it a config but this is fine for now
             ]
 
         })
