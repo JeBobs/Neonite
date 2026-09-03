@@ -1459,7 +1459,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableRuinHouseBeacon === true && versionGlobal === 10) {
+        if (config.bEnableRuinHouseBeacon === true && versionGlobal === 10 || config.bEnableRuinHouseBeacon === true && versionGlobal === 42) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPRH", // Ruined House Beacon Loaded(Chapter 1 Season 10)
@@ -1475,7 +1475,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableGothemCityBeacon === true && version === 10.31) {
+        if (config.bEnableGothemCityBeacon === true && version === 10.31 || config.bEnableRuinHouseBeacon === true && versionGlobal === 42) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBBMP", // Gothem City Beacon Loaded(Chapter 1 Season 10)
@@ -1491,7 +1491,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableGreasyGroveBeacon === true && versionGlobal === 10) {
+        if (config.bEnableGreasyGroveBeacon === true && versionGlobal === 10 || config.bEnableRuinHouseBeacon === true && versionGlobal === 42) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPGG", // Greasy Grove Beacon Loaded(Chapter 1 Season 10)
@@ -1507,7 +1507,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableMoistyPalmsBeacon === true && versionGlobal === 10) {
+        if (config.bEnableMoistyPalmsBeacon === true && versionGlobal === 10 || config.bEnableRuinHouseBeacon === true && versionGlobal === 42) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPMP", // Moisty Palms Beacon Loaded(Chapter 1 Season 10)
@@ -1523,7 +1523,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableFrenzyFieldsBeacon === true && versionGlobal === 10) {
+        if (config.bEnableFrenzyFieldsBeacon === true && versionGlobal === 10 || config.bEnableRuinHouseBeacon === true && versionGlobal === 42) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPFI", // Frenzy Fields Beacon Loaded(Chapter 1 Season 10)
@@ -1539,7 +1539,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableOakBeacon === true && versionGlobal === 10) {
+        if (config.bEnableOakBeacon === true && versionGlobal === 10 || config.bEnableRuinHouseBeacon === true && versionGlobal === 42) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPBO", // Oak Beacon Loaded(Chapter 1 Season 10)
@@ -1555,7 +1555,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableVoidBeacon === true && versionGlobal === 10) {
+        if (config.bEnableVoidBeacon === true && versionGlobal === 10 || config.bEnableRuinHouseBeacon === true && versionGlobal === 42) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPVA", // Void Beacon Loaded(Chapter 1 Season 10)
@@ -1571,7 +1571,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableRetailRowBeacon === true && versionGlobal === 10) {
+        if (config.bEnableRetailRowBeacon === true && versionGlobal === 10 || config.bEnableRuinHouseBeacon === true && versionGlobal === 42) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPRR", // Retail Row Beacon Loaded(Chapter 1 Season 10)
@@ -1587,7 +1587,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableFloatingCubeIsland === true && versionGlobal === 10) {
+        if (config.bEnableFloatingCubeIsland === true && versionGlobal === 10 || config.bEnableRuinHouseBeacon === true && versionGlobal === 42) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBFI", // Floating Cube Island(Chapter 1 Season 10)
